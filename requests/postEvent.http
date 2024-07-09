@@ -1,0 +1,32 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title" : "Novo event 2",
+    "details" : null,
+    "maximumAttendees" : 1
+}
+
+###
+POST http://localhost:3333/events/5df16294-023c-46a1-adc3-8f76a7fd211f/attendees
+Content-Type: application/json
+
+{
+    "name" : "Felipe Barroso",
+    "email" : "felipe2@gmail.com"
+}
+
+
+###
+GET http://localhost:3333/events/5df16294-023c-46a1-adc3-8f76a7fd211f
+
+###
+DELETE http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "id": "96468b40-b251-4592-9725-11fec40e5b88"
+}
+
+###
+GET http://localhost:3333/attendees/4/badge
